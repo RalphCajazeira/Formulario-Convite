@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  zoom: 91%;
 }
 
 :root {
@@ -36,4 +38,8 @@
 
   --text-bd-md: 400 1rem var(--font-Body);
   --text-bd-sm: 400 0.875rem var(--font-Body);
+}
+
+body {
+  background-color: #29292e;
 }

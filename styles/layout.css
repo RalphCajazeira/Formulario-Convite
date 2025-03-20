@@ -1,17 +1,28 @@
 #app {
   display: grid;
   grid-template-columns: 33.6% 66.4%;
-  background-color: #29292e;
 
   .aside-container {
     height: 100vh;
+    padding: 2rem;
     border: 1.25rem solid black;
-    background-color: var(--shape-body);
-    background-image: url(../assets/Background.png);
-    background-position: center;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    border-top-left-radius: 0.75rem;
-    border-bottom-left-radius: 0.75rem;
+    border-radius: 0.75rem 0 0 0.75rem;
+    background: var(--shape-body) url(../assets/Background.png) no-repeat
+      center/cover;
+  }
+
+  .title {
+    & img {
+      width: 2.875rem;
+    }
+    & h2 {
+      font: var(--text-logo);
+      color: var(--pink);
+    }
+
+    & p {
+      font: var(--text-bd-md);
+      color: var(--text-heading);
+    }
   }
 }
