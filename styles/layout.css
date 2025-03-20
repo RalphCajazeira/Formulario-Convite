@@ -1,0 +1,17 @@
+#app {
+  display: grid;
+  grid-template-columns: 33.6% 66.4%;
+  background-color: #29292e;
+
+  .aside-container {
+    height: 100vh;
+    border: 1.25rem solid black;
+    background-color: var(--shape-body);
+    background-image: url(../assets/Background.png);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border-top-left-radius: 0.75rem;
+    border-bottom-left-radius: 0.75rem;
+  }
+}
