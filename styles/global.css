@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 
-  zoom: 91%;
+  /* zoom: 91%; */
 }
 
 :root {
@@ -17,10 +17,12 @@
   --brand-mid: #3487cf;
   --brand-dark: #1d6fb6;
 
+  --shape-background: #131516;
   --shape-button: #2d3136;
+  --shape-body: #212427;
 
   --purple: #b259ff;
-  --fuschia: #ff59f9;
+  --fuchsia: #ff59f9;
   --pink: #ff598b;
 
   --text-body: #c8cdd0;

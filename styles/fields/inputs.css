@@ -1,0 +1,30 @@
+input {
+  all: unset;
+  appearance: none;
+  /* width: 100%; */
+  background-color: transparent;
+  border: 0;
+  background-color: var(--input-base);
+  border: 1px solid var(--input-stroke);
+  border-radius: 0.5rem;
+  padding: 0.875rem 1rem;
+}
+
+.input-wrapper {
+  display: grid;
+  color: var(--text-body);
+  margin-top: 1.5rem;
+  font: var(--text-bd-sm);
+
+  & input {
+    font-size: 0.875rem;
+    color: var(--input-placeholder);
+    margin-top: 0.75rem;
+  }
+}
+
+.input-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
