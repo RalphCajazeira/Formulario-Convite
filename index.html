@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Formulario de Convite</title>
+    <title>Formulário de Convite</title>
 
     <link rel="stylesheet" href="styles/index.css" />
     <link
@@ -52,12 +52,60 @@
               <div class="input-group">
                 <div class="input-wrapper">
                   <label for="title">Início</label>
-                  <input type="datetime-local" id="starter" name="starter" />
+                  <input
+                    type="datetime-local"
+                    id="starter"
+                    name="starter"
+                    required
+                  />
                 </div>
 
                 <div class="input-wrapper">
                   <label for="title">Fim</label>
                   <input type="datetime-local" id="end" name="end" />
+                </div>
+              </div>
+
+              <div class="input-group">
+                <div class="input-wrapper">
+                  <label>Tipo</label>
+
+                  <div class="radio-wrapper">
+                    <label class="radio-inner">
+                      <input
+                        type="radio"
+                        name="event-type"
+                        value="in-person"
+                        id="in-person"
+                        checked
+                      />
+                      <span class="icon in-person-icon"></span>
+                      <!-- <img src="assets/icons/building-2.svg" alt="" /> -->
+                      <span>Presencial</span>
+                    </label>
+
+                    <label class="radio-inner">
+                      <input
+                        type="radio"
+                        name="event-type"
+                        value="online"
+                        id="online"
+                      />
+                      <span class="icon online-icon"></span>
+                      <!-- <img src="assets/icons/video.svg" alt="" /> -->
+                      <span>Online</span>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="input-wrapper">
+                  <label for="place">Local</label>
+                  <input
+                    type="text"
+                    name="place"
+                    id="place"
+                    placeholder="Link ou endereço"
+                  />
                 </div>
               </div>
             </fieldset>

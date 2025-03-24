@@ -8,6 +8,10 @@ input {
   border: 1px solid var(--input-stroke);
   border-radius: 0.5rem;
   padding: 0.875rem 1rem;
+
+  input[type="radio"]:checked + label {
+    background-color: var(--input-stroke);
+  }
 }
 
 .input-wrapper {
@@ -17,9 +21,12 @@ input {
   font: var(--text-bd-sm);
 
   & input {
+    color: var(--text-heading);
     font-size: 0.875rem;
-    color: var(--input-placeholder);
     margin-top: 0.75rem;
+    &::placeholder {
+      color: var(--input-placeholder);
+    }
   }
 }
 
@@ -27,4 +34,19 @@ input {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
+}
+
+/* Garante que o ::-webkit-calendar-picker-indicator se posicione dentro do input */
+input[type="datetime-local"] {
+  position: relative;
+}
+
+/* Estende a área clicável do ícone para o input inteiro */
+input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  cursor: pointer;
 }

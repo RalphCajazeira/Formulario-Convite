@@ -1,0 +1,62 @@
+.radio-wrapper {
+  display: flex;
+  gap: 0.5rem;
+  background-color: var(--input-base);
+  border: 1px solid var(--input-stroke);
+  border-radius: 0.5rem;
+  padding: 0.25rem;
+}
+
+.radio-inner {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: background-color 0.3s ease;
+
+  .icon {
+    width: 1rem;
+    height: 1rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+  }
+
+  /* ícones padrão */
+  .in-person-icon {
+    background-image: url(../../assets/icons/building-2.svg);
+  }
+
+  .online-icon {
+    background-image: url(../../assets/icons/video.svg);
+  }
+
+  input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+
+    &:checked {
+      ~ span {
+        color: white;
+      }
+
+      ~ .in-person-icon {
+        background-image: url(../../assets/icons/building-2-checked.svg);
+      }
+
+      ~ .online-icon {
+        background-image: url(../../assets/icons/video-checked.svg);
+      }
+    }
+  }
+
+  &:has(input:checked) {
+    background-color: var(--input-stroke);
+  }
+}
