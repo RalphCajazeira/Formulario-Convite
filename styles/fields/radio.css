@@ -60,3 +60,44 @@
     background-color: var(--input-stroke);
   }
 }
+
+.event-theme .grid-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+
+  & input {
+    display: none;
+  }
+
+  & .card {
+    margin-top: 1rem;
+    width: 8.375rem;
+    height: 6.4375rem;
+    border-radius: 0.5rem;
+    background-color: var(--shape-button);
+    padding: 0.25rem 0.25rem 0.5rem 0.25rem;
+    transition: outline 0.2s ease;
+
+    &:hover {
+      background-color: var(--shape-hover);
+    }
+
+    &:has(.card-input:checked) {
+      outline: 3px solid var(--brand-light);
+    }
+
+    .card-label {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      align-items: center;
+      cursor: pointer;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}

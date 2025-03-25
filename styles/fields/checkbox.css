@@ -1,0 +1,85 @@
+.theme-style {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  .switch-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 1rem;
+    position: relative;
+  }
+
+  /* Estilo do input (fora do label!) */
+  .switch-input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+  }
+
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 4rem;
+    height: 2rem;
+    cursor: pointer;
+
+    .switch-slider {
+      position: absolute;
+      inset: 0;
+      background-color: var(--input-base);
+      border: 1px solid var(--input-stroke);
+      border-radius: 999px;
+      transition: background-color 0.3s;
+
+      &::before {
+        content: "";
+        position: absolute;
+        height: 1.5rem;
+        width: 1.5rem;
+        left: 0.2rem;
+        top: 0.2rem;
+        background-color: var(--input-stroke);
+        border-radius: 50%;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+      }
+    }
+  }
+
+  /* Quando marcado (ativado) */
+  .switch-input:checked + .switch .switch-slider {
+    background-color: var(--brand-mid);
+
+    &::before {
+      transform: translateX(2rem);
+      background-color: var(--brand-light);
+    }
+  }
+
+  /* Texto que muda */
+  .switch-label {
+    font: var(--text-bd-sm);
+    color: var(--text-heading);
+    min-width: 3.5rem;
+
+    .label-dark {
+      display: block;
+    }
+
+    .label-light {
+      display: none;
+    }
+  }
+
+  .switch-input:checked ~ .switch-label {
+    .label-dark {
+      display: none;
+    }
+
+    .label-light {
+      display: block;
+    }
+  }
+}

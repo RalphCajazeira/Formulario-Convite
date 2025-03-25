@@ -1,9 +1,18 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden; /* impede rolagem do body */
+}
+
 #app {
   display: grid;
   grid-template-columns: 33.6% 66.4%;
   color: var(--text-heading);
+  height: 100vh;
 
   .aside-container {
+    overflow: hidden;
     height: 100vh;
     padding: 2rem;
     border: 1.25rem solid var(--shape-background);
@@ -29,9 +38,17 @@
     }
   }
 
+  main {
+    height: 100%;
+    overflow-y: auto; /* rolagem só no conteúdo principal */
+  }
+
   .main-container {
     padding: 5rem 7.5rem;
     background-color: var(--shape-body);
+    border-block: 1.25rem solid var(--shape-background);
+    border-right: 1.25rem solid var(--shape-background);
+    border-radius: 0 0.75rem 0.75rem 0;
 
     & h1 {
       font: var(--text-md);

@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 
-  zoom: 99.9%;
+  /* zoom: 99.9%; */
 }
 
 :root {
@@ -17,21 +17,29 @@
   --brand-mid: #3487cf;
   --brand-dark: #1d6fb6;
 
-  --shape-background: #131516;
-  --shape-button: #2d3136;
-  --shape-body: #212427;
-
   --purple: #b259ff;
   --fuchsia: #ff59f9;
   --pink: #ff598b;
+  --orange: #ff8b59;
+  --yellow: #ffcd59;
+  --lime: #e1ff59;
+  --green: #59ff91;
+  --cyan: #59fff9;
+  --navy: #6a59ff;
 
-  --text-body: #c8cdd0;
-  --text-heading: #f9f9f9;
+  --danger: #ff5959;
 
-  /* inout */
   --input-base: #1c1f21;
   --input-stroke: #363b40;
   --input-placeholder: #869198;
+
+  --shape-background: #131516;
+  --shape-body: #212427;
+  --shape-button: #2d3136;
+  --shape-hover: #383d42;
+
+  --text-body: #c8cdd0;
+  --text-heading: #f9f9f9;
 
   --text-logo: 400 2.5rem var(--font-logo);
 

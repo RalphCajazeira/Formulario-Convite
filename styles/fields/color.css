@@ -1,0 +1,77 @@
+.color-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  .colors-wrapper {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    justify-content: space-between;
+  }
+
+  .color-option {
+    input {
+      display: none;
+    }
+
+    .circle {
+      width: 2.125rem;
+      height: 2.125rem;
+      border-radius: 50%;
+      border: 0.375rem solid var(--shape-button);
+      display: block;
+      cursor: pointer;
+      transition: outline 0.2s ease;
+    }
+
+    input:checked + .circle {
+      outline: 0.125rem solid var(--brand-light);
+      outline-offset: -0.125rem;
+    }
+
+    &.color-1 .circle {
+      background-color: var(--brand-light);
+    }
+
+    &.color-2 .circle {
+      background-color: var(--purple);
+    }
+
+    &.color-3 .circle {
+      background-color: var(--fuchsia);
+    }
+
+    &.color-4 .circle {
+      background-color: var(--pink);
+    }
+
+    &.color-5 .circle {
+      background-color: var(--orange);
+    }
+
+    &.color-6 .circle {
+      background-color: var(--yellow);
+    }
+
+    &.color-7 .circle {
+      background-color: var(--lime);
+    }
+
+    &.color-8 .circle {
+      background-color: var(--green);
+    }
+
+    &.color-9 .circle {
+      background-color: var(--cyan);
+    }
+
+    &.color-10 .circle {
+      background-color: var(--navy);
+    }
+
+    &.color-11 .circle {
+      background-color: var(--danger);
+    }
+  }
+}

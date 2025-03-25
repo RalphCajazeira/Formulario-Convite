@@ -1,7 +1,7 @@
-input {
+input,
+textarea {
   all: unset;
   appearance: none;
-  /* width: 100%; */
   background-color: transparent;
   border: 0;
   background-color: var(--input-base);
@@ -12,6 +12,11 @@ input {
   input[type="radio"]:checked + label {
     background-color: var(--input-stroke);
   }
+
+  &:focus,
+  &:focus-within {
+    border: 1px solid var(--brand-light);
+  }
 }
 
 .input-wrapper {
@@ -20,7 +25,8 @@ input {
   margin-top: 1.5rem;
   font: var(--text-bd-sm);
 
-  & input {
+  & input,
+  & textarea {
     color: var(--text-heading);
     font-size: 0.875rem;
     margin-top: 0.75rem;
@@ -49,4 +55,11 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   height: 100%;
   inset: 0;
   cursor: pointer;
+}
+
+.input-area {
+  & textarea {
+    height: 8.5rem;
+    word-wrap: break-word;
+  }
 }
