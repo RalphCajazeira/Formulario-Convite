@@ -1,0 +1,19 @@
+.button-wrapper {
+  & button {
+    all: unset;
+    display: flex;
+    margin-top: 3rem;
+    margin-left: auto;
+    gap: 0.75rem;
+    padding: 0.875rem 1.25rem;
+    align-items: center;
+    background-color: var(--brand-dark);
+    border-radius: 0.5rem;
+
+    & span {
+      color: var(--text-heading);
+      font: var(--font-Body);
+      font-weight: 600;
+    }
+  }
+}
