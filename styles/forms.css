@@ -23,4 +23,11 @@ form {
   & fieldset + fieldset {
     margin-top: 3rem;
   }
+
+  .line-separation {
+    width: 100%;
+    height: 1px;
+    background-color: var(--input-stroke);
+    border: none;
+  }
 }

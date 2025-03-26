@@ -83,3 +83,35 @@
     }
   }
 }
+
+.terms-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  .checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+    font: var(--text-bd-sm);
+    color: var(--text-body);
+
+    input {
+      display: none;
+    }
+
+    .checkbox-image {
+      width: 1.25rem;
+      height: 1.25rem;
+      background-image: url(../../assets/icons/checkbox-default.svg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      flex-shrink: 0;
+    }
+
+    input:checked + .checkbox-image {
+      background-image: url(../../assets/icons/checkbox-checked.svg);
+    }
+  }
+}
